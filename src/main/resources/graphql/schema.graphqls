@@ -1,0 +1,32 @@
+type Query {
+    getAllAdmins:[Admin!]
+    getAdmin(id:ID!):Admin
+}
+type Mutation {
+    addAdmin(adminInput:adminInput!):Admin!
+    updateAdmin(updateInput:updateInput):Admin!
+    deleteAdmin(updateInput:updateInput):String!
+}
+
+input adminInput {
+    name:String!
+    username:String!
+    email:String!
+    mobile:String!
+}
+
+type Admin {
+    id:Int!
+    name:String!
+    username:String!
+    email:String!
+    mobile:String!
+}
+
+input updateInput {
+    id:Int!
+    name:String!
+    username:String!
+    email:String!
+    mobile:String!
+}
